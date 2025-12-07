@@ -4,7 +4,7 @@
 </p>
 
 # 👾 AI-Explorer25  
-### Exploring AI, Cybersecurity, Psychology & Human Perception
+### Exploring AI, Tech, Psychology & Human Perception
 
 Welcome to my GitHub Pages site — built with the **Midnight** Jekyll theme for a clean, dark, high-contrast look.
 
@@ -40,7 +40,11 @@ Feel free to explore my projects and follow my journey.
   <a href="https://github.com/AI-Explorer25">
     <img src="https://img.shields.io/badge/GitHub-Profile-blue?style=for-the-badge&logo=github">
   </a>
-  <a href="https://AI-Explorer25.github.io">
-    <img src="https://img.shields.io/badge/My-Website-purple?style=for-the-badge">
+  
+  <!-- Added Iris Classifier Project Link -->
+  <br><br>
+  <a href="https://ai-explorer25.github.io/iris-classifier/" target="_blank">
+    <img src="https://img.shields.io/badge/Iris%20Classifier-Live%20Project-green?style=for-the-badge&logo=python">
   </a>
 </p>
+
