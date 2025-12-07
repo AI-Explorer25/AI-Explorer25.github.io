@@ -1,3 +1,23 @@
-theme: jekyll-theme-minimal
-title: AI-Explorer25’s Homepage
-description: A simple personal site hosted with GitHub Pages.
+# -------------------------
+#   SITE SETTINGS
+# -------------------------
+
+# Theme for GitHub Pages
+theme: jekyll-theme-midnight
+
+# Site metadata
+title: "AI-Explorer25 — Exploring AI, Cyber & Creativity"
+description: "A clean dark-themed site documenting my journey into AI, cybersecurity, Python, and human perception."
+
+# URL settings
+url: "https://AI-Explorer25.github.io"
+baseurl: ""   # leave empty for GitHub user pages
+
+# Social links (used by some themes)
+github_username: AI-Explorer25
+
+# Optional toggles
+show_downloads: false
+
+# Markdown engine
+markdown: kramdown
