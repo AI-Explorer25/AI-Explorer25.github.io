@@ -13,7 +13,7 @@ Welcome to my GitHub Pages site — built with the **Midnight** Jekyll theme for
 ## 🔍 What I’m Working On
 - Becoming an **AI Engineer**  
 - Advancing my **Python** skills (modules, generators, iterators)  
-- Starting my journey into **Cybersecurity**  
+- Continuing my journey into **Programming**  
 - Researching human perception, neuroscience, and AI  
 
 ---
