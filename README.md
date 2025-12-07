@@ -33,6 +33,28 @@ This website is generated using **GitHub Pages** and themed with **jekyll-theme-
 Feel free to explore my projects and follow my journey.
 
 ---
+---
+
+## 🚀 Projects
+
+Here are some of the projects I'm building and deploying through GitHub Pages:
+
+<p align="center">
+
+  <!-- Iris Classifier Project -->
+  <a href="https://ai-explorer25.github.io/iris-classifier/" target="_blank">
+    <img src="https://img.shields.io/badge/Iris%20Classifier-Decision%20Tree%20ML%20Model-green?style=for-the-badge&logo=python">
+  </a>
+
+  <!-- Placeholder for Future Projects -->
+  <br><br>
+  <a href="https://ai-explorer25.github.io" target="_blank">
+    <img src="https://img.shields.io/badge/More%20Projects-Coming%20Soon-blueviolet?style=for-the-badge&logo=github">
+  </a>
+
+</p>
+
+---
 
 ## 🔗 Useful Links
 
