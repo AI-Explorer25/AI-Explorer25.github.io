@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Owen Ashworth | Aspiring AI Engineer</title>
+  <meta content="Portfolio website for Owen Ashworth, an aspiring AI Engineer building projects in NLP, computer vision, FastAPI, and Hugging Face deployment." name="description">
+  <meta content="AI Engineer, Machine Learning, Python, NLP, Computer Vision, FastAPI, Hugging Face, Portfolio" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    .hero .btn {
+      margin-right: 0.75rem;
+      margin-top: 1rem;
+      border-radius: 50px;
+      padding: 0.65rem 1.25rem;
+      font-weight: 600;
+    }
+
+    .tech-card {
+      background: #fff;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+      border-radius: 14px;
+      padding: 1rem;
+      height: 100%;
+      text-align: center;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+    }
+
+    .tech-card img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 0.65rem;
+    }
+
+    .tech-card span {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 4px 22px rgba(0, 0, 0, 0.08);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: contain;
+      background: #f8f9fa;
+    }
+
+    .project-card-body {
+      padding: 1.25rem;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      color: var(--heading-color);
+      border-radius: 999px;
+      padding: 0.3rem 0.65rem;
+      margin: 0.15rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .project-links a {
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .modal-body h5 {
+      margin-top: 1rem;
+      color: var(--heading-color);
+    }
+  </style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="Profile photo of Owen Ashworth" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="#hero" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Owen Ashworth</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://github.com/AI-Explorer25" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+      <a href="#" class="linkedin" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-cpu navicon"></i> Technologies</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li><a href="#cv"><i class="bi bi-file-earmark-text navicon"></i> Curriculum Vitae</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg.jpg" alt="Portfolio background image" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Owen Ashworth</h2>
+        <p>I build <span class="typed" data-typed-items="practical AI systems, NLP applications, computer vision projects, deployable ML workflows">practical AI systems</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <div>
+          <a href="#portfolio" class="btn btn-primary">View Projects</a>
+          <a href="cv/Owen_Ashworth_CV.pdf" class="btn btn-outline-light" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I am an aspiring AI Engineer focused on building practical machine learning systems from raw data through to deployment.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="Profile photo of Owen Ashworth">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Aspiring AI Engineer</h2>
+            <p class="fst-italic py-3">
+              I build portfolio projects that combine data preparation, machine learning, model evaluation, reproducible workflows, APIs, and public deployment.
+            </p>
+            <p>
+              My recent work includes a medical radiology text summarization system using a fine-tuned FLAN-T5 model and a visual product recommendation system using CLIP image embeddings and cosine similarity search.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>United Kingdom</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>AI Engineering</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span>AI-Explorer25</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Core skills:</strong> <span>Python, ML, NLP, CV</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Deployment:</strong> <span>FastAPI, Docker, Hugging Face</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Availability:</strong> <span>Open to AI opportunities</span></li>
+                </ul>
+              </div>
+            </div>
+            <p class="py-3">
+              I aim to build AI systems that are technically clear, reproducible, honest about limitations, and useful to real users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Technologies</h2>
+        <p>A practical toolkit covering machine learning, data preparation, model evaluation, APIs, and deployment.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python logo"><span>Python</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pandas.svg" alt="Pandas logo"><span>Pandas</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/numpy.svg" alt="NumPy logo"><span>NumPy</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pytorch.svg" alt="PyTorch logo"><span>PyTorch</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/huggingface.svg" alt="Hugging Face logo"><span>Hugging Face</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scikitlearn.svg" alt="Scikit-learn logo"><span>Scikit-learn</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/fastapi.svg" alt="FastAPI logo"><span>FastAPI</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gradio.svg" alt="Gradio logo"><span>Gradio</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker logo"><span>Docker</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/git.svg" alt="Git logo"><span>Git</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub logo"><span>GitHub</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jupyter.svg" alt="Jupyter logo"><span>Jupyter</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/html5.svg" alt="HTML5 logo"><span>HTML5</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" alt="CSS3 logo"><span>CSS3</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="JavaScript logo"><span>JavaScript</span></div></div>
+          <div class="col-6 col-md-4 col-lg-3"><div class="tech-card"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bootstrap.svg" alt="Bootstrap logo"><span>Bootstrap</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Completed AI Engineer projects covering natural language processing, computer vision, recommendation systems, APIs, and public deployment.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <img src="assets/img/portfolio/app-1.jpg" alt="Medical radiology summarization project screenshot">
+              <div class="project-card-body">
+                <h3>Medical Radiology Summarization</h3>
+                <p>Fine-tuned FLAN-T5 model that generates concise radiology IMPRESSION summaries from chest X-ray FINDINGS text.</p>
+                <div>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">FLAN-T5</span>
+                  <span class="tech-badge">Transformers</span>
+                  <span class="tech-badge">ROUGE</span>
+                  <span class="tech-badge">FastAPI</span>
+                  <span class="tech-badge">Docker</span>
+                </div>
+                <div class="project-links mt-3">
+                  <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#radiologyModal">View Details</button>
+                  <a href="https://github.com/AI-Explorer25/medical-radiology-summarization" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">GitHub</a>
+                  <a href="https://ai-explorer64-medical-radiology-summarization.hf.space" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <img src="assets/img/portfolio/product-1.jpg" alt="Visual product recommendation project screenshot">
+              <div class="project-card-body">
+                <h3>Visual Product Recommendations</h3>
+                <p>Computer vision recommendation system that uses CLIP embeddings and cosine similarity to return visually similar fashion products.</p>
+                <div>
+                  <span class="tech-badge">Python</span>
+                  <span class="tech-badge">CLIP</span>
+                  <span class="tech-badge">PyTorch</span>
+                  <span class="tech-badge">Cosine Similarity</span>
+                  <span class="tech-badge">Gradio</span>
+                  <span class="tech-badge">FastAPI</span>
+                </div>
+                <div class="project-links mt-3">
+                  <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#visualRecsModal">View Details</button>
+                  <a href="https://github.com/AI-Explorer25/visual-product-recommendations" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">GitHub</a>
+                  <a href="https://ai-explorer64-visual-product-recommendations.hf.space" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="cv" class="resume section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Curriculum Vitae</h2>
+        <p>A concise overview of my AI Engineer training, project work, and technical skills.</p>
+        <a href="cv/Owen_Ashworth_CV.pdf" class="btn btn-primary mt-3" download>Download PDF CV</a>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Profile</h3>
+            <div class="resume-item pb-0">
+              <h4>Owen Ashworth</h4>
+              <p><em>Aspiring AI Engineer with practical project experience in NLP, computer vision, recommendation systems, API development, reproducible pipelines, and deployment.</em></p>
+              <ul>
+                <li>United Kingdom</li>
+                <li>GitHub: AI-Explorer25</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Training & Certification</h3>
+            <div class="resume-item">
+              <h4>AI Engineer Traineeship</h4>
+              <h5>Completed 2026</h5>
+              <p><em>IT Career Switch</em></p>
+              <p>Completed two employer-visible AI projects covering data preparation, modelling, evaluation, deployment, documentation, and project presentation.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Microsoft Azure AI Fundamentals</h4>
+              <h5>AI-900</h5>
+              <p><em>Microsoft Certification</em></p>
+              <p>Passed AI-900, covering core AI workloads, responsible AI, Azure AI services, computer vision, NLP, and generative AI concepts.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Project Experience</h3>
+            <div class="resume-item">
+              <h4>Medical Radiology Summarization</h4>
+              <h5>NLP / Text Summarization</h5>
+              <ul>
+                <li>Parsed raw XML radiology reports into structured FINDINGS and IMPRESSION text pairs.</li>
+                <li>Fine-tuned FLAN-T5-small and evaluated output quality using ROUGE metrics.</li>
+                <li>Built a FastAPI service, HTML interface, Docker deployment, and public Hugging Face demo.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Visual Product Recommendations</h4>
+              <h5>Computer Vision / Recommendations</h5>
+              <ul>
+                <li>Generated CLIP image embeddings for a cleaned fashion image dataset.</li>
+                <li>Implemented cosine similarity search with near-duplicate and diversity-aware filtering.</li>
+                <li>Built a Gradio web app and optional FastAPI endpoint for image-based recommendations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to contact me about AI engineering opportunities, project work, or technical discussions.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>United Kingdom</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="https://github.com/AI-Explorer25" target="_blank" rel="noopener noreferrer">github.com/AI-Explorer25</a></p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p><a href="#" target="_blank" rel="noopener noreferrer">Add LinkedIn profile link</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="8" id="message-field" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <button type="submit">Send Message</button>
+                  <p class="small mt-3 mb-0">This form uses Formspree for secure message delivery.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal fade" id="radiologyModal" tabindex="-1" aria-labelledby="radiologyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="radiologyModalLabel">Medical Radiology Summarization</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Problem</h5>
+          <p>Radiology reports often contain detailed FINDINGS text and shorter IMPRESSION summaries. This project builds a model that generates the IMPRESSION from the FINDINGS.</p>
+
+          <h5>Approach</h5>
+          <p>The workflow parses XML reports, cleans and structures the dataset, creates train/test splits, evaluates a baseline, fine-tunes FLAN-T5-small, and evaluates the final model using ROUGE.</p>
+
+          <h5>Key Features</h5>
+          <ul>
+            <li>XML report parsing and data preparation.</li>
+            <li>FLAN-T5 fine-tuning for text summarization.</li>
+            <li>ROUGE-1, ROUGE-2, and ROUGE-L evaluation.</li>
+            <li>Reproducible script-based pipeline.</li>
+            <li>FastAPI backend, HTML interface, Dockerfile, and Hugging Face deployment.</li>
+          </ul>
+
+          <h5>Result</h5>
+          <p>The final model achieved a ROUGE-1 F1 score of 0.6244 on the test set, exceeding the required project threshold.</p>
+
+          <h5>Limitations</h5>
+          <p>A later duplication analysis found train-test content overlap, so future work would deduplicate before splitting and compare the more conservative results.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/AI-Explorer25/medical-radiology-summarization" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">GitHub</a>
+          <a href="https://ai-explorer64-medical-radiology-summarization.hf.space" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="visualRecsModal" tabindex="-1" aria-labelledby="visualRecsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="visualRecsModalLabel">Visual Product Recommendations</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Problem</h5>
+          <p>Users need a simple way to find visually similar clothing products from an uploaded image.</p>
+
+          <h5>Approach</h5>
+          <p>The system uses CLIP as a visual feature extractor, converts images into normalized embeddings, compares them with cosine similarity, and applies filtering to avoid near-identical recommendations.</p>
+
+          <h5>Key Features</h5>
+          <ul>
+            <li>Image indexing, validation, and duplicate removal.</li>
+            <li>CLIP image embedding generation.</li>
+            <li>Cosine similarity recommendation search.</li>
+            <li>Near-duplicate and diversity-aware filtering.</li>
+            <li>Gradio interface, Hugging Face deployment, and optional FastAPI endpoint.</li>
+          </ul>
+
+          <h5>Result</h5>
+          <p>The final documented recommendation output returned five visually similar products with cosine similarity scores above the project guidance threshold.</p>
+
+          <h5>Limitations</h5>
+          <p>The prototype uses visual similarity only. Future improvements could add metadata-aware filtering, text-to-image search, user feedback, or FAISS for larger catalogues.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/AI-Explorer25/visual-product-recommendations" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">GitHub</a>
+          <a href="https://ai-explorer64-visual-product-recommendations.hf.space" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Owen Ashworth</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
