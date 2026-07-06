@@ -82,11 +82,57 @@
       border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
     }
 
-    .project-card img {
+    .project-image-button {
+      display: block;
       width: 100%;
-      height: 360px;
-      object-fit: contain;
+      padding: 0;
+      border: 0;
       background: #f8f9fa;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-image-button img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: top center;
+      background: #f8f9fa;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .project-image-button::after {
+      content: "View details";
+      position: absolute;
+      left: 50%;
+      bottom: 1rem;
+      transform: translateX(-50%);
+      background: rgba(5, 13, 24, 0.88);
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .project-card:hover .project-image-button img,
+    .project-image-button:focus-visible img {
+      transform: scale(1.02);
+      filter: brightness(0.92);
+    }
+
+    .project-card:hover .project-image-button::after,
+    .project-image-button:focus-visible::after {
+      opacity: 1;
+    }
+
+    .project-image-button:focus-visible {
+      outline: 3px solid var(--accent-color);
+      outline-offset: -3px;
     }
 
     .project-card-body {
@@ -104,7 +150,8 @@
       font-weight: 600;
     }
 
-    .project-links a {
+    .project-links a,
+    .project-links button {
       margin-right: 0.5rem;
       margin-top: 0.5rem;
     }
@@ -113,6 +160,17 @@
       margin-top: 1rem;
       color: var(--heading-color);
     }
+    @media (max-width: 575px) {
+      .project-image-button img {
+        height: 260px;
+      }
+
+      .hero .btn {
+        display: inline-block;
+        margin-right: 0.4rem;
+      }
+    }
+
   </style>
 
 </head>
@@ -236,7 +294,7 @@
     <section id="portfolio" class="portfolio section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Projects</h2>
-        <p>Completed AI Engineer projects covering natural language processing, computer vision, recommendation systems, APIs, and public deployment.</p>
+        <p>Completed AI Engineer projects covering natural language processing, computer vision, recommendation systems, APIs, and public deployment. Click a screenshot or use View Details to learn more.</p>
       </div>
 
       <div class="container">
@@ -244,7 +302,9 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="project-card">
-              <img src="assets/img/portfolio/app-1.jpg" alt="Medical radiology summarization project screenshot">
+              <button type="button" class="project-image-button" data-bs-toggle="modal" data-bs-target="#radiologyModal" aria-label="Open Medical Radiology Summarization project details">
+                <img src="assets/img/projects/radiology-summarization.png" alt="Medical radiology summarization app screenshot">
+              </button>
               <div class="project-card-body">
                 <h3>Medical Radiology Summarization</h3>
                 <p>Fine-tuned FLAN-T5 model that generates concise radiology IMPRESSION summaries from chest X-ray FINDINGS text.</p>
@@ -267,7 +327,9 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="project-card">
-              <img src="assets/img/portfolio/product-1.jpg" alt="Visual product recommendation project screenshot">
+              <button type="button" class="project-image-button" data-bs-toggle="modal" data-bs-target="#visualRecsModal" aria-label="Open Visual Product Recommendations project details">
+                <img src="assets/img/projects/visual-product-recommendations.png" alt="Visual product recommendation app screenshot">
+              </button>
               <div class="project-card-body">
                 <h3>Visual Product Recommendations</h3>
                 <p>Computer vision recommendation system that uses CLIP embeddings and cosine similarity to return visually similar fashion products.</p>
