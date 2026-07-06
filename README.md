@@ -1,7 +1,7 @@
 <h1 align="center">Owen Ashworth | AI Engineer Portfolio</h1>
 
 <p align="center">
-  A responsive single-page portfolio showcasing practical AI Engineer projects, deployed applications, technical skills, and a downloadable Curriculum Vitae.
+  A responsive portfolio showcasing practical AI Engineer projects, deployed applications, technical skills, and a downloadable Curriculum Vitae.
 </p>
 
 <p align="center">
