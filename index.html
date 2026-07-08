@@ -473,6 +473,7 @@
                 <div class="col-md-12 text-center">
                   <button type="submit" class="btn btn-primary">Send Message</button>
                   <p class="small mt-3 mb-0">This form uses Formspree for secure message delivery.</p>
+                  <p id="contact-form-status" class="small mt-2 mb-0" aria-live="polite"></p>
                 </div>
               </div>
             </form>
@@ -581,6 +582,65 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".contact-form");
+      const status = document.getElementById("contact-form-status");
+
+      if (!form) return;
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = "Sending...";
+        }
+
+        if (status) {
+          status.textContent = "";
+          status.className = "small mt-2 mb-0";
+        }
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          if (response.ok) {
+            form.reset();
+
+            if (status) {
+              status.textContent = "Your message has been sent successfully.";
+              status.className = "small mt-2 mb-0 text-success";
+            }
+          } else {
+            if (status) {
+              status.textContent = "Something went wrong. Please try again.";
+              status.className = "small mt-2 mb-0 text-danger";
+            }
+          }
+        } catch (error) {
+          if (status) {
+            status.textContent = "Something went wrong. Please try again.";
+            status.className = "small mt-2 mb-0 text-danger";
+          }
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = "Send Message";
+          }
+        }
+      });
+    });
+  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
